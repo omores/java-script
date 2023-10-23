@@ -1,130 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="en_US" data-theme-mode="dark" data-light-theme="daylight" data-dark-theme="midnight">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" id="baseStyle" href="stage/build/export/base.css?2.10.11"/>
+    <link rel="stylesheet" type="text/css" id="themeDefaultStyle" href="appearance/themes/midnight/theme.css?2.10.11"/>
+    
+    <title>C:\Users\kvazar\github\o\JavaScript - SiYuan  v2.10.11</title>
+    <style>
+        body {background-color: var(--b3-theme-background);color: var(--b3-theme-on-background)}
+        .b3-typography, .protyle-wysiwyg, .protyle-title {font-size:16px !important}
+.b3-typography code:not(.hljs), .protyle-wysiwyg span[data-type~=code] { font-variant-ligatures: none }
+.li > .protyle-action {height:34px;line-height: 34px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h1, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h2, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h3, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h4, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h5, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h6 {line-height:34px;}
+.protyle-wysiwyg [data-node-id].li > .protyle-action:after {height: 16px;width: 16px;margin:-8px 0 0 -8px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action svg {height: 14px}
+.protyle-wysiwyg [data-node-id].li:before {height: calc(100% - 34px);top:34px}
+.protyle-wysiwyg [data-node-id] [spellcheck] {min-height:26px;}
+.protyle-wysiwyg [data-node-id] {}
+.protyle-wysiwyg .li {min-height:34px}
+.protyle-gutters button svg {height:26px}
+.protyle-wysiwyg img.emoji, .b3-typography img.emoji {width:18px}
+.protyle-wysiwyg .h1 img.emoji, .b3-typography h1 img.emoji {width:35px}
+.protyle-wysiwyg .h2 img.emoji, .b3-typography h2 img.emoji {width:31px}
+.protyle-wysiwyg .h3 img.emoji, .b3-typography h3 img.emoji {width:27px}
+.protyle-wysiwyg .h4 img.emoji, .b3-typography h4 img.emoji {width:25px}
+.protyle-wysiwyg .h5 img.emoji, .b3-typography h5 img.emoji {width:22px}
+.protyle-wysiwyg .h6 img.emoji, .b3-typography h6 img.emoji {width:20px}
+.b3-typography:not(.b3-typography--default), .protyle-wysiwyg, .protyle-title, .protyle-title__input{font-family: "mr_InverkrugOutline", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;}
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>## Основы JavaScript
-
-    * [1. Привет, Мир!](https://code-basics.com/ru/languages/javascript/lessons/hello-world)
-    * [2. Комментарии](https://code-basics.com/ru/languages/javascript/lessons/comments)
-    * [3. Инструкции (Statements)](https://code-basics.com/ru/languages/javascript/lessons/instructions)
-    * [4. Как мы проверяем ваши решения](https://code-basics.com/ru/languages/javascript/lessons/testing)
-    * [5. Синтаксические ошибки](https://code-basics.com/ru/languages/javascript/lessons/syntax-errors)
-    
-    JavaScript – один из самых популярных языков программирования в мире. Он используется для создания интерактивных веб-страниц, мобильных приложений, в серверной разработке. Изучать JS мы будем с нуля, с самых азов. Первый модуль – плацдарм  для написания осмысленных программ. В нем мы разберем, как написать свой первый код на JS. Расскажем, что такое комментарии и зачем они нужны. На примере проверки ваших решений рассмотрим, что такое тестирование и как читать вывод тестов.
-    
-    ## Арифметика
-    
-    * [6. Арифметические операции](https://code-basics.com/ru/languages/javascript/lessons/basic) ((20231016190526-s0y9ppi "+"))
-    * [7. Операторы](https://code-basics.com/ru/languages/javascript/lessons/operator)
-    * [8. Коммутативная операция](https://code-basics.com/ru/languages/javascript/lessons/commutativity)
-    * [9. Композиция операций](https://code-basics.com/ru/languages/javascript/lessons/composition)
-    * [10. Приоритет операций](https://code-basics.com/ru/languages/javascript/lessons/priority)
-    * [11. Числа с плавающей точкой](https://code-basics.com/ru/languages/javascript/lessons/float)
-    * [12. Бесконечность (Infinity)](https://code-basics.com/ru/languages/javascript/lessons/infinity)
-    * [13. NaN](https://code-basics.com/ru/languages/javascript/lessons/nan)
-    * [14. Линтер](https://code-basics.com/ru/languages/javascript/lessons/linting)
-    
-    Современные программы создаются для обслуживания бизнесов, помощи в ежедневной жизни и развлечений. Но в основе их работы по-прежнему лежат вычисления. Наиболее простая и базовая тема в программировании — арифметика. В этом модуле мы переведем арифметические действия на язык программирования, поговорим о приоритете операций и операциях с дробным числами. Вспомним школьные правила из уроков математики и узнаем, что получится, если делить на ноль в JavaScript. А под конец расскажем, что такое линтер и почему он может «ругаться».
-    
-    ## Строки
-    
-    * [15. Кавычки](https://code-basics.com/ru/languages/javascript/lessons/quotes)
-    * [16. Экранирующие последовательности](https://code-basics.com/ru/languages/javascript/lessons/escape-characters)
-    * [17. Конкатенация](https://code-basics.com/ru/languages/javascript/lessons/string-concatenation)
-    * [18. Кодировка](https://code-basics.com/ru/languages/javascript/lessons/encoding)
-    
-    Текст в программировании называется «строками», и эта тема не так проста, как может показаться. Как вывести фразу, в которой есть и одинарные, и двойные кавычки? Как вообще быть с текстом, ведь компьютер не знает ничего о буквах! Модуль посвящен разным аспектам написания текста – от кавычек и экранирования до кодировки.
-    
-    ## Переменные в языке JavaScript
-    
-    * [19. Что такое переменная](https://code-basics.com/ru/languages/javascript/lessons/definition)
-    * [20. Изменение переменной](https://code-basics.com/ru/languages/javascript/lessons/change)
-    * [21. Выбор имени переменной](https://code-basics.com/ru/languages/javascript/lessons/variables-naming)
-    * [22. Ошибки при работе с переменными](https://code-basics.com/ru/languages/javascript/lessons/errors)
-    * [23. Выражения в определениях](https://code-basics.com/ru/languages/javascript/lessons/variables-expressions)
-    * [24. Переменные и конкатенация](https://code-basics.com/ru/languages/javascript/lessons/variable-concatenation)    я здесь!
-    * [25. Стили именования](https://code-basics.com/ru/languages/javascript/lessons/naming-style)
-    * [26. Магические числа](https://code-basics.com/ru/languages/javascript/lessons/magic-numbers)
-    * [27. Константы](https://code-basics.com/ru/languages/javascript/lessons/constants)
-    * [28. Интерполяция](https://code-basics.com/ru/languages/javascript/lessons/interpolation)
-    * [29. Извлечение символов из строки](https://code-basics.com/ru/languages/javascript/lessons/symbols)
-    
-    Информацию можно помещать в специальные «хранилища» — переменные. Это позволяет переиспользовать уже существующие данные и не дублировать их в разных частях кода. В этом модуле мы разберем как изменять переменные и именовать их, чтобы чтение вашего кода было понятным для любого разработчика. Вы поймете, что придумать название переменной не так-то просто! А еще расскажем, как использовать переменные для упрощения сложных вычислений.
-    
-    ## Типы данных JavaScript
-    
-    * [30. Типы данных](https://code-basics.com/ru/languages/javascript/lessons/primitive-data-types)
-    * [31. undefined](https://code-basics.com/ru/languages/javascript/lessons/undefined)
-    * [32. Неизменяемость примитивных типов](https://code-basics.com/ru/languages/javascript/lessons/data-types-immutability)
-    * [33. Слабая типизация](https://code-basics.com/ru/languages/javascript/lessons/data-types-weak-typing)
-    
-    JavaScript — язык со слабой типизацией и неизменяемыми примитивными типами данных. Что произойдет, если мы попробуем умножить число на строку? Каким образом JavaScript понимает, что за тип данных перед ним? И что делает JavaScript, когда видит несоответствие типов? Ответы на эти вопросы вы найдете в текущем модуле.
-    
-    ## Вызов функций
-    
-    * [34. Функции и их вызов](https://code-basics.com/ru/languages/javascript/lessons/call)
-    * [35. Математические функции JavaScript](https://code-basics.com/ru/languages/javascript/lessons/math)
-    * [36. Сигнатура функции](https://code-basics.com/ru/languages/javascript/lessons/function-signature)
-    * [37. Параметры по умолчанию](https://code-basics.com/ru/languages/javascript/lessons/calling-functions-default-arguments)
-    * [38. Вызов функции — выражение](https://code-basics.com/ru/languages/javascript/lessons/calling-functions-expression)
-    * [39. Функции с переменным числом параметров](https://code-basics.com/ru/languages/javascript/lessons/variadic-parameters)
-    * [40. Детерминированность](https://code-basics.com/ru/languages/javascript/lessons/deterministic)
-    * [41. Стандартная библиотека](https://code-basics.com/ru/languages/javascript/lessons/stdlib)
-    
-    Для выражения любой произвольной операции в программировании существует понятие «функция». Функции — кирпичики, из которых программисты строят системы. В этом модуле мы научимся пользоваться уже созданными функциями. Посмотрим на сигнатуру функции в документации и разберемся, как её использовать. Познакомимся со стандартными библиотеками, которые хранят тысячи функций. Все функции невозможно выучить, но каждый программист должен знать, где искать документацию по ним.
-    
-    ## Свойства и Методы
-    
-    * [42. Свойства](https://code-basics.com/ru/languages/javascript/lessons/properties-syntax)
-    * [43. Методы](https://code-basics.com/ru/languages/javascript/lessons/properties-methods)
-    * [44. Неизменяемость](https://code-basics.com/ru/languages/javascript/lessons/properties-immutability)
-    * [45. Свойства и методы как выражения](https://code-basics.com/ru/languages/javascript/lessons/properties-expressions)
-    * [46. Цепочка вызовов](https://code-basics.com/ru/languages/javascript/lessons/properties-chain-of-methods)
-    
-    Данные, которыми мы оперируем в своих программах, могут обладать важными свойствами. В JavaScript свойства встроены прямо в язык. Кроме свойств у данных существуют методы — функции, находящиеся внутри свойств. Свойства и методы — такие же выражения, как переменные, константы или вызовы функции, а значит, их можно всячески комбинировать. Глубже эти темы разбираются на отдельных курсах, посвященных объектно-ориентированным возможностям JavaScript. Мы же в этом модуле изучим основы.
-    
-    ## Определение функций
-    
-    * [47. Создание (определение) функций](https://code-basics.com/ru/languages/javascript/lessons/define-functions-syntax)
-    * [48. Возврат значений](https://code-basics.com/ru/languages/javascript/lessons/define-functions-return)
-    * [49. Параметры функций](https://code-basics.com/ru/languages/javascript/lessons/define-functions-parameters)
-    * [50. Необязательные параметры функций](https://code-basics.com/ru/languages/javascript/lessons/define-functions-default-parameters)
-    * [51. Упрощенный синтаксис функций](https://code-basics.com/ru/languages/javascript/lessons/define-functions-short-syntax)
-    
-    Определение собственных функций значительно упрощает написание и поддержку программ. Например, умение определять функции позволяет объединять сложные (составные) операции в одну – вся сложность может быть скрыта за одной простой функцией. Научившись писать функции, вы сделаете первый шаг на пути к построению по-настоящему полезных программ. И мы вам в этом поможем. В этом модуле вы создадите свою первую функцию и научитесь давать ей (а заодно переменным и константам) понятные названия.
-    
-    ## Логика
-    
-    * [52. Логический тип](https://code-basics.com/ru/languages/javascript/lessons/bool-type)
-    * [53. Предикаты](https://code-basics.com/ru/languages/javascript/lessons/predicates)
-    * [54. Комбинирование логических операций](https://code-basics.com/ru/languages/javascript/lessons/logic-combine-expressions)
-    * [55. Логические операторы](https://code-basics.com/ru/languages/javascript/lessons/logical-operators)
-    * [56. Отрицание](https://code-basics.com/ru/languages/javascript/lessons/logical-negation)
-    * [57. Результат логических выражений](https://code-basics.com/ru/languages/javascript/lessons/logical-expressions)
-    
-    Логические выражения позволяют отвечать на вопросы, которые возникают во время работы программы. Пользователь аутентифицирован? Подписка оплачена? Год високосный? В этом модуле изучаем функции-предикаты – те, которые задают вопрос и отвечают на него – правда это или ложь. Попрактикуемся в написании таких функций и перейдем к более сложным логическим выражениям.
-    
-    ## Условные конструкции
-    
-    * [58. Условная конструкция (if)](https://code-basics.com/ru/languages/javascript/lessons/if)
-    * [59. else](https://code-basics.com/ru/languages/javascript/lessons/if-else)
-    * [60. Конструкция else if](https://code-basics.com/ru/languages/javascript/lessons/else-if)
-    * [61. Тернарный оператор](https://code-basics.com/ru/languages/javascript/lessons/ternary-operator)
-    * [62. Конструкция Switch](https://code-basics.com/ru/languages/javascript/lessons/switch)
-    
-    Задача функции-предиката — получить ответ на вопрос, но обычно этого недостаточно и нужно выполнить определенное действие в зависимости от ответа. If и Switch – конструкции JavaScript, с помощью которых программист может выбирать необходимое поведение программы в зависимости от разных условий: пропускать одни инструкции и выполнять другие. Их и разберем на практике в этом модуле.
-    
-    ## Циклы
-    
-    * [63. Цикл While](https://code-basics.com/ru/languages/javascript/lessons/while)
-    * [64. Агрегация данных (Числа)](https://code-basics.com/ru/languages/javascript/lessons/aggregation-numbers)
-    * [65. Агрегация данных (Строки)](https://code-basics.com/ru/languages/javascript/lessons/aggregation-strings)
-    * [66. Обход строк](https://code-basics.com/ru/languages/javascript/lessons/iteration-over-string)
-    * [67. Условия внутри тела цикла](https://code-basics.com/ru/languages/javascript/lessons/conditions-inside-loops)
-    * [68. Формирование строк в циклах](https://code-basics.com/ru/languages/javascript/lessons/build-strings)
-    * [69. Синтаксический сахар](https://code-basics.com/ru/languages/javascript/lessons/syntax-sugar)
-    * [70. Инкремент и декремент](https://code-basics.com/ru/languages/javascript/lessons/mutators)
-    * [71. Возврат из циклов](https://code-basics.com/ru/languages/javascript/lessons/return-from-loops)
-    * [72. Цикл For](https://code-basics.com/ru/languages/javascript/lessons/for)</p>
-</body>
-</html>
+<div class="b3-typography" style="max-width: 800px;margin: 0 auto;" id="preview"><h1 id="20231023161323-ezl0vzx" updated="20231023161323">JavaScript</h1>
+<h2 id="20231023161323-vuz2frs" updated="20231023161323">Основы JavaScript</h2>
+<ul id="20231023161323-rgcbnhe" updated="20231023161323">
+<li id="20231023161323-f9sdhxf" updated="20231023161323">
+<p id="20231023161323-vn0tblb" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/hello-world">1. Привет, Мир!</a></p>
+</li>
+<li id="20231023161323-2xvy547" updated="20231023161323">
+<p id="20231023161323-y1nehnd" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/comments">2. Комментарии</a></p>
+</li>
+<li id="20231023161323-k6p9ty1" updated="20231023161323">
+<p id="20231023161323-tyunidk" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/instructions">3. Инструкции (Statements)</a></p>
+</li>
+<li id="20231023161323-425t9sf" updated="20231023161323">
+<p id="20231023161323-x8513af" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/testing">4. Как мы проверяем ваши решения</a></p>
+</li>
+<li id="20231023161323-fsjttek" updated="20231023161323">
+<p id="20231023161323-ngrd9o3" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/syntax-errors">5. Синтаксические ошибки</a></p>
+</li>
+</ul>
+<p id="20231023161323-bade8ei" updated="20231023161323">JavaScript – один из самых популярных языков программирования в мире. Он используется для создания интерактивных веб-страниц, мобильных приложений, в серверной разработке. Изучать JS мы будем с нуля, с самых азов. Первый модуль – плацдарм  для написания осмысленных программ. В нем мы разберем, как написать свой первый код на JS. Расскажем, что такое комментарии и зачем они нужны. На примере проверки ваших решений рассмотрим, что такое тестирование и как читать вывод тестов.</p>
+<h2 id="20231023161323-pxa4284" updated="20231023161323">Арифметика</h2>
+<ul id="20231023161323-mkar9rq" updated="20231023161323">
+<li id="20231023161323-oagft79" updated="20231023161323">
+<p id="20231023161323-jiwll6e" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/basic">6. Арифметические операции</a> +</p>
+</li>
+<li id="20231023161323-uxhrrio" updated="20231023161323">
+<p id="20231023161323-oufz7aj" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/operator">7. Операторы</a></p>
+</li>
+<li id="20231023161323-flm030a" updated="20231023161323">
+<p id="20231023161323-t0a37ko" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/commutativity">8. Коммутативная операция</a></p>
+</li>
+<li id="20231023161323-06dba85" updated="20231023161323">
+<p id="20231023161323-ao34kaf" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/composition">9. Композиция операций</a></p>
+</li>
+<li id="20231023161323-0hltz4p" updated="20231023161323">
+<p id="20231023161323-n9a3hwq" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/priority">10. Приоритет операций</a></p>
+</li>
+<li id="20231023161323-xwmpv4g" updated="20231023161323">
+<p id="20231023161323-uvsl7kx" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/float">11. Числа с плавающей точкой</a></p>
+</li>
+<li id="20231023161323-9mpawy4" updated="20231023161323">
+<p id="20231023161323-vw953tm" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/infinity">12. Бесконечность (Infinity)</a></p>
+</li>
+<li id="20231023161323-horkr5v" updated="20231023161323">
+<p id="20231023161323-z3agbb1" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/nan">13. NaN</a></p>
+</li>
+<li id="20231023161323-m48b295" updated="20231023161323">
+<p id="20231023161323-e34ngae" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/linting">14. Линтер</a></p>
+</li>
+</ul>
+<p id="20231023161323-x0k3lpj" updated="20231023161323">Современные программы создаются для обслуживания бизнесов, помощи в ежедневной жизни и развлечений. Но в основе их работы по-прежнему лежат вычисления. Наиболее простая и базовая тема в программировании — арифметика. В этом модуле мы переведем арифметические действия на язык программирования, поговорим о приоритете операций и операциях с дробным числами. Вспомним школьные правила из уроков математики и узнаем, что получится, если делить на ноль в JavaScript. А под конец расскажем, что такое линтер и почему он может «ругаться».</p>
+<h2 id="20231023161323-hi0rnm7" updated="20231023161323">Строки</h2>
+<ul id="20231023161323-g8r83hd" updated="20231023161323">
+<li id="20231023161323-avpcjo3" updated="20231023161323">
+<p id="20231023161323-cgiocc3" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/quotes">15. Кавычки</a></p>
+</li>
+<li id="20231023161323-ha7u9fs" updated="20231023161323">
+<p id="20231023161323-3gdgdux" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/escape-characters">16. Экранирующие последовательности</a></p>
+</li>
+<li id="20231023161323-686mykm" updated="20231023161323">
+<p id="20231023161323-y019npd" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/string-concatenation">17. Конкатенация</a></p>
+</li>
+<li id="20231023161323-asw93ur" updated="20231023161323">
+<p id="20231023161323-r8u9h8a" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/encoding">18. Кодировка</a></p>
+</li>
+</ul>
+<p id="20231023161323-bkg9hjg" updated="20231023161323">Текст в программировании называется «строками», и эта тема не так проста, как может показаться. Как вывести фразу, в которой есть и одинарные, и двойные кавычки? Как вообще быть с текстом, ведь компьютер не знает ничего о буквах! Модуль посвящен разным аспектам написания текста – от кавычек и экранирования до кодировки.</p>
+<h2 id="20231023161323-9bjg4xw" updated="20231023161323">Переменные в языке JavaScript</h2>
+<ul id="20231023161323-oud08j0" updated="20231023161323">
+<li id="20231023161323-domc850" updated="20231023161323">
+<p id="20231023161323-3ps15rn" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/definition">19. Что такое переменная</a></p>
+</li>
+<li id="20231023161323-9p7faeo" updated="20231023161323">
+<p id="20231023161323-r7zi35a" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/change">20. Изменение переменной</a></p>
+</li>
+<li id="20231023161323-u64uljj" updated="20231023161323">
+<p id="20231023161323-8sed8hl" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/variables-naming">21. Выбор имени переменной</a></p>
+</li>
+<li id="20231023161323-0bidyl4" updated="20231023161323">
+<p id="20231023161323-ebedmno" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/errors">22. Ошибки при работе с переменными</a></p>
+</li>
+<li id="20231023161323-5d1jtfe" updated="20231023161323">
+<p id="20231023161323-snf6583" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/variables-expressions">23. Выражения в определениях</a></p>
+</li>
+<li id="20231023161323-q0047hp" updated="20231023161323">
+<p id="20231023161323-fn1xihr" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/variable-concatenation">24. Переменные и конкатенация</a>    я здесь!</p>
+</li>
+<li id="20231023161323-iymd1p1" updated="20231023161323">
+<p id="20231023161323-jb4syy2" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/naming-style">25. Стили именования</a></p>
+</li>
+<li id="20231023161323-hslyvui" updated="20231023161323">
+<p id="20231023161323-2gp5fl1" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/magic-numbers">26. Магические числа</a></p>
+</li>
+<li id="20231023161323-w6poyb8" updated="20231023161323">
+<p id="20231023161323-wa58056" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/constants">27. Константы</a></p>
+</li>
+<li id="20231023161323-yaqo8jf" updated="20231023161323">
+<p id="20231023161323-6onl41a" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/interpolation">28. Интерполяция</a></p>
+</li>
+<li id="20231023161323-3edov5g" updated="20231023161323">
+<p id="20231023161323-b9o4dw8" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/symbols">29. Извлечение символов из строки</a></p>
+</li>
+</ul>
+<p id="20231023161323-7aq0trj" updated="20231023161323">Информацию можно помещать в специальные «хранилища» — переменные. Это позволяет переиспользовать уже существующие данные и не дублировать их в разных частях кода. В этом модуле мы разберем как изменять переменные и именовать их, чтобы чтение вашего кода было понятным для любого разработчика. Вы поймете, что придумать название переменной не так-то просто! А еще расскажем, как использовать переменные для упрощения сложных вычислений.</p>
+<h2 id="20231023161323-z2lpyow" updated="20231023161323">Типы данных JavaScript</h2>
+<ul id="20231023161323-axh7d6s" updated="20231023161323">
+<li id="20231023161323-du554n5" updated="20231023161323">
+<p id="20231023161323-q6c279d" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/primitive-data-types">30. Типы данных</a></p>
+</li>
+<li id="20231023161323-c8rib8z" updated="20231023161323">
+<p id="20231023161323-q5j6uqf" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/undefined">31. undefined</a></p>
+</li>
+<li id="20231023161323-6mm7oek" updated="20231023161323">
+<p id="20231023161323-u8htulg" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/data-types-immutability">32. Неизменяемость примитивных типов</a></p>
+</li>
+<li id="20231023161323-9uh2kqu" updated="20231023161323">
+<p id="20231023161323-nl0aawo" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/data-types-weak-typing">33. Слабая типизация</a></p>
+</li>
+</ul>
+<p id="20231023161323-s5pf7ip" updated="20231023161323">JavaScript — язык со слабой типизацией и неизменяемыми примитивными типами данных. Что произойдет, если мы попробуем умножить число на строку? Каким образом JavaScript понимает, что за тип данных перед ним? И что делает JavaScript, когда видит несоответствие типов? Ответы на эти вопросы вы найдете в текущем модуле.</p>
+<h2 id="20231023161323-tid732y" updated="20231023161323">Вызов функций</h2>
+<ul id="20231023161323-9ltd96e" updated="20231023161323">
+<li id="20231023161323-6nm4x5c" updated="20231023161323">
+<p id="20231023161323-lw6yqxt" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/call">34. Функции и их вызов</a></p>
+</li>
+<li id="20231023161323-b0x2o4f" updated="20231023161323">
+<p id="20231023161323-08yqsk6" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/math">35. Математические функции JavaScript</a></p>
+</li>
+<li id="20231023161323-4fhrxpo" updated="20231023161323">
+<p id="20231023161323-jwtuq40" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/function-signature">36. Сигнатура функции</a></p>
+</li>
+<li id="20231023161323-kizdqmh" updated="20231023161323">
+<p id="20231023161323-fx06s3j" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/calling-functions-default-arguments">37. Параметры по умолчанию</a></p>
+</li>
+<li id="20231023161323-ut7w0sc" updated="20231023161323">
+<p id="20231023161323-m862iqu" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/calling-functions-expression">38. Вызов функции — выражение</a></p>
+</li>
+<li id="20231023161323-gj12ygf" updated="20231023161323">
+<p id="20231023161323-f9ubjmu" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/variadic-parameters">39. Функции с переменным числом параметров</a></p>
+</li>
+<li id="20231023161323-tbihjkz" updated="20231023161323">
+<p id="20231023161323-h3oh5zz" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/deterministic">40. Детерминированность</a></p>
+</li>
+<li id="20231023161323-3vli0x5" updated="20231023161323">
+<p id="20231023161323-hguwcdm" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/stdlib">41. Стандартная библиотека</a></p>
+</li>
+</ul>
+<p id="20231023161323-zigcfs3" updated="20231023161323">Для выражения любой произвольной операции в программировании существует понятие «функция». Функции — кирпичики, из которых программисты строят системы. В этом модуле мы научимся пользоваться уже созданными функциями. Посмотрим на сигнатуру функции в документации и разберемся, как её использовать. Познакомимся со стандартными библиотеками, которые хранят тысячи функций. Все функции невозможно выучить, но каждый программист должен знать, где искать документацию по ним.</p>
+<h2 id="20231023161323-iw3i1k0" updated="20231023161323">Свойства и Методы</h2>
+<ul id="20231023161323-eycuijo" updated="20231023161323">
+<li id="20231023161323-03168rk" updated="20231023161323">
+<p id="20231023161323-fmnvu4e" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/properties-syntax">42. Свойства</a></p>
+</li>
+<li id="20231023161323-07u7ffq" updated="20231023161323">
+<p id="20231023161323-7znsxzk" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/properties-methods">43. Методы</a></p>
+</li>
+<li id="20231023161323-32s98ao" updated="20231023161323">
+<p id="20231023161323-dn8qiff" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/properties-immutability">44. Неизменяемость</a></p>
+</li>
+<li id="20231023161323-i8cn0iq" updated="20231023161323">
+<p id="20231023161323-75i6a7k" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/properties-expressions">45. Свойства и методы как выражения</a></p>
+</li>
+<li id="20231023161323-w2bs5jn" updated="20231023161323">
+<p id="20231023161323-snnw8h4" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/properties-chain-of-methods">46. Цепочка вызовов</a></p>
+</li>
+</ul>
+<p id="20231023161323-jc7wldp" updated="20231023161323">Данные, которыми мы оперируем в своих программах, могут обладать важными свойствами. В JavaScript свойства встроены прямо в язык. Кроме свойств у данных существуют методы — функции, находящиеся внутри свойств. Свойства и методы — такие же выражения, как переменные, константы или вызовы функции, а значит, их можно всячески комбинировать. Глубже эти темы разбираются на отдельных курсах, посвященных объектно-ориентированным возможностям JavaScript. Мы же в этом модуле изучим основы.</p>
+<h2 id="20231023161323-1eaa6th" updated="20231023161323">Определение функций</h2>
+<ul id="20231023161323-gw6o7uj" updated="20231023161323">
+<li id="20231023161323-ctv8d17" updated="20231023161323">
+<p id="20231023161323-s7xzjdx" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/define-functions-syntax">47. Создание (определение) функций</a></p>
+</li>
+<li id="20231023161323-7m7kefp" updated="20231023161323">
+<p id="20231023161323-rd0dfxx" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/define-functions-return">48. Возврат значений</a></p>
+</li>
+<li id="20231023161323-clw0yhc" updated="20231023161323">
+<p id="20231023161323-dobeywu" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/define-functions-parameters">49. Параметры функций</a></p>
+</li>
+<li id="20231023161323-24esjle" updated="20231023161323">
+<p id="20231023161323-xyeeusr" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/define-functions-default-parameters">50. Необязательные параметры функций</a></p>
+</li>
+<li id="20231023161323-yw8g0qo" updated="20231023161323">
+<p id="20231023161323-ysmj500" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/define-functions-short-syntax">51. Упрощенный синтаксис функций</a></p>
+</li>
+</ul>
+<p id="20231023161323-wwxgjyh" updated="20231023161323">Определение собственных функций значительно упрощает написание и поддержку программ. Например, умение определять функции позволяет объединять сложные (составные) операции в одну – вся сложность может быть скрыта за одной простой функцией. Научившись писать функции, вы сделаете первый шаг на пути к построению по-настоящему полезных программ. И мы вам в этом поможем. В этом модуле вы создадите свою первую функцию и научитесь давать ей (а заодно переменным и константам) понятные названия.</p>
+<h2 id="20231023161323-27rl11g" updated="20231023161323">Логика</h2>
+<ul id="20231023161323-0vklc29" updated="20231023161323">
+<li id="20231023161323-kc97i73" updated="20231023161323">
+<p id="20231023161323-0572zw8" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/bool-type">52. Логический тип</a></p>
+</li>
+<li id="20231023161323-94bc1wk" updated="20231023161323">
+<p id="20231023161323-oygwyip" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/predicates">53. Предикаты</a></p>
+</li>
+<li id="20231023161323-sh4ah9a" updated="20231023161323">
+<p id="20231023161323-d2i8pyf" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/logic-combine-expressions">54. Комбинирование логических операций</a></p>
+</li>
+<li id="20231023161323-p2ne74s" updated="20231023161323">
+<p id="20231023161323-3hzhgs8" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/logical-operators">55. Логические операторы</a></p>
+</li>
+<li id="20231023161323-4r61ngb" updated="20231023161323">
+<p id="20231023161323-4kjzk42" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/logical-negation">56. Отрицание</a></p>
+</li>
+<li id="20231023161323-d6a9rqp" updated="20231023161323">
+<p id="20231023161323-ti6umqq" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/logical-expressions">57. Результат логических выражений</a></p>
+</li>
+</ul>
+<p id="20231023161323-li3uwcr" updated="20231023161323">Логические выражения позволяют отвечать на вопросы, которые возникают во время работы программы. Пользователь аутентифицирован? Подписка оплачена? Год високосный? В этом модуле изучаем функции-предикаты – те, которые задают вопрос и отвечают на него – правда это или ложь. Попрактикуемся в написании таких функций и перейдем к более сложным логическим выражениям.</p>
+<h2 id="20231023161323-cgnwdvd" updated="20231023161323">Условные конструкции</h2>
+<ul id="20231023161323-r40ep0u" updated="20231023161323">
+<li id="20231023161323-1htuw91" updated="20231023161323">
+<p id="20231023161323-kcbkb4a" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/if">58. Условная конструкция (if)</a></p>
+</li>
+<li id="20231023161323-als67vl" updated="20231023161323">
+<p id="20231023161323-iai41jk" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/if-else">59. else</a></p>
+</li>
+<li id="20231023161323-jzelthi" updated="20231023161323">
+<p id="20231023161323-r271es8" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/else-if">60. Конструкция else if</a></p>
+</li>
+<li id="20231023161323-uhceffg" updated="20231023161323">
+<p id="20231023161323-cgn9r1k" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/ternary-operator">61. Тернарный оператор</a></p>
+</li>
+<li id="20231023161323-cinumif" updated="20231023161323">
+<p id="20231023161323-ds64c3u" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/switch">62. Конструкция Switch</a></p>
+</li>
+</ul>
+<p id="20231023161323-ka1yg7z" updated="20231023161323">Задача функции-предиката — получить ответ на вопрос, но обычно этого недостаточно и нужно выполнить определенное действие в зависимости от ответа. If и Switch – конструкции JavaScript, с помощью которых программист может выбирать необходимое поведение программы в зависимости от разных условий: пропускать одни инструкции и выполнять другие. Их и разберем на практике в этом модуле.</p>
+<h2 id="20231023161323-apamxgq" updated="20231023161323">Циклы</h2>
+<ul id="20231023161323-kb6hc8b" updated="20231023161323">
+<li id="20231023161323-u9albqf" updated="20231023161323">
+<p id="20231023161323-zesf8hy" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/while">63. Цикл While</a></p>
+</li>
+<li id="20231023161323-q9xv96l" updated="20231023161323">
+<p id="20231023161323-ixhvzbq" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/aggregation-numbers">64. Агрегация данных (Числа)</a></p>
+</li>
+<li id="20231023161323-7c4bda5" updated="20231023161323">
+<p id="20231023161323-ye9etnu" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/aggregation-strings">65. Агрегация данных (Строки)</a></p>
+</li>
+<li id="20231023161323-o86il2v" updated="20231023161323">
+<p id="20231023161323-2t8p0m3" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/iteration-over-string">66. Обход строк</a></p>
+</li>
+<li id="20231023161323-gqz21hp" updated="20231023161323">
+<p id="20231023161323-n2hza36" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/conditions-inside-loops">67. Условия внутри тела цикла</a></p>
+</li>
+<li id="20231023161323-hqe87mr" updated="20231023161323">
+<p id="20231023161323-us9ldk3" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/build-strings">68. Формирование строк в циклах</a></p>
+</li>
+<li id="20231023161323-xmnhv11" updated="20231023161323">
+<p id="20231023161323-ohebzid" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/syntax-sugar">69. Синтаксический сахар</a></p>
+</li>
+<li id="20231023161323-rkd6om8" updated="20231023161323">
+<p id="20231023161323-88auekm" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/mutators">70. Инкремент и декремент</a></p>
+</li>
+<li id="20231023161323-rm57tic" updated="20231023161323">
+<p id="20231023161323-by6g51h" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/return-from-loops">71. Возврат из циклов</a></p>
+</li>
+<li id="20231023161323-wlbizcd" updated="20231023161323">
+<p id="20231023161323-m1b52du" updated="20231023161323"><a href="https://code-basics.com/ru/languages/javascript/lessons/for">72. Цикл For</a></p>
+</li>
+</ul>
+</div>
+<script src="appearance/icons/material/icon.js?2.10.11"></script>
+<script src="stage/build/export/protyle-method.js?2.10.11"></script>
+<script src="stage/protyle/js/lute/lute.min.js?2.10.11"></script>    
+<script>
+    window.siyuan = {
+      config: {
+        appearance: { mode: 1, codeBlockThemeDark: "github-dark", codeBlockThemeLight: "arduino-light" },
+        editor: { 
+          codeLineWrap: true,
+          codeLigatures: false,
+          plantUMLServePath: "https://www.plantuml.com/plantuml/svg/~1",
+          codeSyntaxHighlightLineNum: false,
+          katexMacros: JSON.stringify({}),
+        }
+      },
+      languages: {copy:"Copy"}
+    };
+    const previewElement = document.getElementById('preview');
+    Protyle.highlightRender(previewElement, "stage/protyle");
+    Protyle.mathRender(previewElement, "stage/protyle", false);
+    Protyle.mermaidRender(previewElement, "stage/protyle");
+    Protyle.flowchartRender(previewElement, "stage/protyle");
+    Protyle.graphvizRender(previewElement, "stage/protyle");
+    Protyle.chartRender(previewElement, "stage/protyle");
+    Protyle.mindmapRender(previewElement, "stage/protyle");
+    Protyle.abcRender(previewElement, "stage/protyle");
+    Protyle.htmlRender(previewElement);
+    Protyle.plantumlRender(previewElement, "stage/protyle");
+    document.querySelectorAll(".protyle-action__copy").forEach((item) => {
+      item.addEventListener("click", (event) => {
+            let text = item.parentElement.nextElementSibling.textContent.trimEnd();
+            text = text.replace(/ /g, " "); // Replace non-breaking spaces with normal spaces when copying
+            navigator.clipboard.writeText(text);
+            event.preventDefault();
+            event.stopPropagation();
+      })
+    });
+</script></body></html>
